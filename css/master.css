@@ -1,0 +1,253 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    
+}
+::-webkit-scrollbar-track{
+    background-color: #eee;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--green-color);
+    
+}
+
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+  }
+body{
+    font-family: "Open Sans" , sans-serif;
+    
+}
+*:focus{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+.page{
+    background-color: #f1f5f9;
+    min-height: 100vh;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    height: fit-content;
+}
+
+
+
+/* satrt side bar */
+.sidebar{
+    width: 250px ;
+    box-shadow: 0 0 10px #ddd;
+    
+}
+
+.sidebar >h3{
+    margin-bottom: 50px;
+    font-weight: 900;
+}
+
+
+.sidebar >h3::before {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 80px;
+    height: 3px;
+    bottom: -20px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.sidebar >h3::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 12px;
+    height: 12px;
+    border: 4px solid white;
+    border-radius: 50%;
+    bottom: -28px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.sidebar ul li a{
+    transition: 0.3s;
+    color: black;
+} 
+
+.sidebar ul li a:hover ,.sidebar ul li a:active{
+    background-color: var(--blue-alt-color);
+    color: white;
+    transform: scale(1.05 ,1.05);
+    box-shadow: 0 0 15px var(--blue-color);
+}
+.sidebar ul li a span{
+    margin-left: 10px;
+}
+
+@media (max-width: 767px){
+    .sidebar{
+        width: 70px;
+        padding: 10px;
+    } 
+    .sidebar >h3{
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+    .sidebar >h3::after,.sidebar >h3::before{
+        display: none;
+    }
+    .sidebar ul li a {
+        justify-content: center;
+    }
+    .sidebar ul li a span{
+        display: none;
+    }
+
+
+
+
+}
+
+.sidebar .active{
+    background-color: var(--green-color);
+    color: white;
+    transform: scale(1.05 ,1.05);
+}
+
+
+
+
+/* start navbar */
+.content{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.content .navbar{
+    width: 100%;
+
+}
+.content .navbar .search{
+    position: relative;
+}
+
+.content .search button{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    font-size: 10px;
+    color: #7e7d7d97;
+}
+
+
+.content .search input{
+    border-radius: 6px;
+    border: 2px solid var(--grey-color);
+    padding: 8px 5px 8px 35px;
+    width: 150px;
+    transition: .3s;
+    font-size: 11px;
+
+}
+
+.content .search input:focus ,.content .search input:hover{
+    width: 200px;
+    border-color: var(--green-color);
+    box-shadow: 0 0 15px var(--green-color);
+}
+
+.content .navbar .pfndnot{
+width: 60px;
+position: relative;
+}
+
+.content .navbar .pfndnot img{
+    width: 30px;
+    border: var(--green-color) solid 3px;
+    border-radius: 50%;
+}
+.content .navbar .pfndnot img:hover{
+    border: var(--blue-color) dashed 6px;
+    box-shadow: 0 0 10px var(--blue-color);
+}
+.content .navbar .pfndnot i{
+    font-size: 18px;
+}
+.content .pfndnot .activepoint{
+    background-color: #f44336;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    left: 11px;
+    top: 0px;
+}
+
+
+
+/* END  SIDEBAR */
+
+
+
+/* START DASHBOARD */
+
+
+.main >h1{
+    padding-bottom: 5px;
+    font-size: 26px;
+}
+.main >hr{
+    width: 100px;
+    height: 3px;
+    border: none;
+    background-color: black;
+    position: relative;
+}
+.main >hr::before{
+    content: '';
+    background-color: white;
+    position: absolute;
+    height: 3px;
+    width: 60%;
+    left: 40%;
+}
+
+
+
+.maincontent{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+    gap: 20px 20px;
+    margin-top: 20px;
+}
+
+.maincontent .globalcard{
+    min-width: 400px;
+    transition: .3s;
+    border-radius: 6px;box-shadow: 0 0 10px 3px var(--grey-color) ;
+}
+.maincontent .globalcard:hover{
+    box-shadow: 0 0 20px 8px var(--green-color) ;
+}
+.maincontent .card-1{
+    background-color: rgba(191, 191, 190, 0.387);
+}
+
+.maincontent .card-1 img{
+    width: 40px;
+}
