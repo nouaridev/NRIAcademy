@@ -1,3 +1,13 @@
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+  }
+
+
 /* start box */
 .d-flex{
     display: flex;
@@ -64,6 +74,17 @@
     .p-relative{
         position: relative;
     }
+
+    .p-absolute{
+        position: absolute;
+    }
+
+    .centerdiv{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% ,-50%);
+    }
 /* start position */
 
 /* satarrt font */
@@ -81,3 +102,45 @@
         border-radius: 6px;
     }
 /* end  border */
+
+/* start bottons */
+
+.red-botton{
+    padding:5px;
+    font-size: 12px;
+    color: #eee;
+    background-color: var(--red-color);
+}
+.blue-botton{
+    padding: 5px 10px;  border-radius: 6px;
+    font-size: 12px;
+    color: #eee;
+    background-color: var(--blue-color);
+  
+}
+.orange-botton{
+    padding: 5px 10px;  border-radius: 6px;
+    font-size: 12px;
+    color: #eee;
+    background-color: var(--orange-color);
+}
+
+.green-botton{
+    padding: 5px 10px;  border-radius: 6px;
+    font-size: 12px;
+    color: #eee;
+    background-color: var(--green-color);
+}
+
+.eee-botton{
+    padding: 5px 10px;  border-radius: 6px;
+    font-size: 12px;
+    color: black;
+    height: fit-content;
+    background-color: #7a797931;
+    
+}
+
+.btnhovered:hover{
+    opacity: 0.9;
+}
