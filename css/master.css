@@ -50,7 +50,10 @@ ul{
 .sidebar{
     width: 250px ;
     box-shadow: 0 0 10px #ddd;
-    
+    background-image: url(/imgs/welcome.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 200px;
 }
 
 .sidebar >h3{
@@ -233,6 +236,7 @@ position: relative;
 .maincontent{
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+
     gap: 20px 20px;
     margin-top: 20px;
    
@@ -240,9 +244,10 @@ position: relative;
 
 
 .maincontent .globalcard{
+    
     min-width: 400px;
     transition: .3s;
-    border-radius: 6px;box-shadow: 0 0 10px 3px var(--grey-color) ;
+    border-radius: 6px;box-shadow: 0 0 5px 4px var(--green-color) ;
 }
 
 
@@ -268,13 +273,14 @@ position: relative;
 @media (max-width:319px){
  
     .maincontent{
-        grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+        grid-template-columns: repeat( auto-fit, minmax(110px, 1fr) );
     }
     .page  section.main{
         padding: 10px;
     }
     .maincontent .globalcard{
         min-width: 100px;
+        text-align: center;
     }
 }
 
@@ -285,6 +291,7 @@ position: relative;
     
     .maincontent .globalcard{
         min-width: 200px;
+        text-align: center;
     }
 
 }
@@ -460,6 +467,7 @@ position: relative;
 
 
  .maincontent .card-3:hover .lines-1 .line::before{
+
     padding: 5px;
     background-color: var(--blue-color);
     color: white;
@@ -468,7 +476,7 @@ position: relative;
     content: '80%';
     top: 50%;
     left: 100%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) ;
     position: absolute;
     
  }
@@ -696,7 +704,13 @@ position: relative;
         text-decoration-line: line-through;
         opacity: 0.5;
     }
-
+    .maincontent .card-6 .task:hover{
+        border-left: 4px solid var(--orange-color);
+        padding-left: 10px;
+    }
+    .maincontent .card-6 .task:hover i{
+        color: var(--orange-color);
+    }
 
     .maincontent .card-6:hover i{
         color: var(--green-color);
@@ -716,5 +730,199 @@ position: relative;
     .maincontent .card-6 .tasks .task i{
         position: relative;
         margin-top: 15px;
+    }
+}
+
+
+
+/* end  of card 6 */
+
+
+/* start  of  card 7 */
+
+.maincontent  .card-7{
+    background-color: rgb(255, 255, 255) ;
+}
+.maincontent .card-7 .cards{
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-around;
+}
+.maincontent .card-7 .card{
+    margin: 20px 0;
+
+}
+
+.maincontent .card-7  .card:first-child{
+    color:  #888888ad;
+}
+.maincontent .card-7  .card:not(:first-child){
+    background-color: #eee;
+    padding: 5px 5px;
+    margin: 10px 0;
+    border-left: 4px solid var(--green-color);
+    -webkit-margin-collapse: collapse;text-align: center;
+}
+
+/* end  card 7 */
+
+
+
+/* start  card  8 */
+.maincontent .card-8{
+    background-color: rgb(255, 255, 255) ;
+}
+.maincontent .card-8 img{
+    width: 40px;
+}
+.maincontent .card-8 .upload-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+    -webkit-margin-collapse: collapse;
+    border-left: solid 4px var(--green-color);
+    background-color: #eee;
+    align-items: center;
+    padding: 0 5px;
+    border-radius: 6px;
+
+}
+.maincontent .card-8 .upload-item .left{
+    display: flex;
+}
+.maincontent .card-8 .upload-item .txt{
+    padding-left: 10px;
+}
+.maincontent .card-8 .upload-item .size{
+    width: fit-content;
+}
+
+.maincontent .card-8 .upload-item:hover{
+    border-left: solid 4px var(--blue-color);
+}
+.maincontent .card-8 .upload-item:hover img{
+    transition: 0.3s;
+    transform: scale(.9,.9);
+}
+
+
+@media (max-width:424px) {
+    .maincontent .card-8 .upload-item{
+        text-align: center;
+        flex-direction: column;
+        background-color: #eee;
+        padding: 10px 5px;
+        border-left: solid 4px var(--green-color);
+        align-items: center;
+    }
+    .maincontent .card-8 .upload-item .left{
+        flex-direction: column;
+        align-items: center;
+    }
+    .maincontent .card-8 .upload-item .size{
+        
+        margin-top: 20px;
+    }
+}
+
+/* end  of the  card  8 */
+ 
+
+
+/* start  of  the card  9 */
+
+    .maincontent .card-9{
+        background-color:  rgb(255, 255, 255) ;
+        background-image: url(/imgs/project.png) ;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: 200px;
+        overflow: hidden;
+          
+    }
+    .maincontent .card-9 .boxes{
+        position: relative;
+        height: fit-content;
+        margin-top: 20px;
+        padding: 0;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.822);
+    }
+    .maincontent .card-9 .boxes::before{
+        content: '';
+        width: 1.5px;
+        height: 100%;
+        top: 0;
+        left: 10px;
+        transform: translateX(-50%);
+        z-index: 1;
+        position: absolute;
+        background-color: var(--blue-color);
+
+    }
+
+    .maincontent .card-9 .line{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+       
+    }
+    .maincontent .card-9 .line:not(:last-child){
+        margin-bottom: 20px;
+    }
+    .maincontent .card-9 .line p{
+        padding-left: 20px;
+    }
+    .maincontent .card-9 .line .circle{
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+        border-radius: 50%;
+        border: 2px solid white;
+        outline: 2px solid var(--blue-color);
+    }
+    .maincontent .card-9:hover .line .circle{
+        box-shadow: 0 0 10px 5px var(--green-color);
+    }
+
+    .maincontent .card-9 .line:not(:last-child) .circle{
+        background-color: #0d69d5;
+    }
+    .maincontent .card-9 .line:last-child .circle{
+       
+        background-color: white;
+    }
+
+    .maincontent .card-9 .line .animated{
+        animation-name: lightpoint;
+        animation-duration: 1.8s;
+        animation-delay: 0s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+    }
+
+
+    @keyframes lightpoint {
+        0%{
+            background-color: white;
+        }
+        50%{
+            background-color: var(--blue-color);
+        }
+        100%{
+            background-color: white;
+        }
+    }
+
+
+@media (max-width:416px){
+    .maincontent .card-9 .line p{
+        font-size: 9px;
+        font-weight: bold;
+    }
+    .maincontent .card-9 .line .circle p{
+        width: 60%;
     }
 }
