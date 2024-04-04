@@ -1066,6 +1066,7 @@ position: relative;
 
 .maincontent .card-11 .cardfoter .likes ,.maincontent .card-11 .cardfoter .coments{
     display: flex;
+
     width: 50px;
     justify-content: space-between;
     align-items: center;
@@ -1082,3 +1083,102 @@ position: relative;
         padding-left: 0;
     }
 }
+
+
+/* end   card 11 */
+
+
+
+/* start of card 12  */
+
+    .maincontent .card-12 .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        margin-top: 20px;
+    }
+    .maincontent .card-12 .cards .txt{
+      display: flex;
+      justify-content: space-between;
+      width: fit-content;
+      align-items: center;
+    } 
+    .maincontent .card-12 .cards .txt p{
+        font-size: 10px;
+        padding-left: 5px;
+    }
+    
+    .maincontent .card-12 .card{
+        width: 100%;
+        display: flex;
+        transition: 0.3s;
+
+        justify-content: space-between;
+    }
+
+    .maincontent .card-12 .card:hover{
+        border-top-right-radius: 20px;
+    }
+
+    .maincontent .card-12 .card:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .maincontent .card-12 .card:nth-child(1),
+    .maincontent .card-12 .card:nth-child(2),
+    .maincontent .card-12 .card:nth-child(4){
+        background-color: #3694ff36;
+    }
+    .maincontent .card-12 .card:nth-child(3){
+        background-color: #f4433641;
+    }
+    .maincontent .card-12 .card i{
+        padding: 20px 15px;
+    }
+
+    .maincontent .card-12 .cards .card:nth-child(1) i,
+     .maincontent .card-12 .cards .card:nth-child(2) i,
+     .maincontent .card-12 .cards .card:nth-child(4) i{
+        background-color: var(--blue-color);
+        color: white;
+        font-size:30px;
+    }
+
+    .maincontent .card-12 .cards .card:nth-child(4) i{
+        padding: 20px 17px;
+    }
+    .maincontent .card-12 .cards .card:nth-child(3) i{
+        background-color: red;
+        color: white;
+        font-size: 30px;
+        padding: 20px 13px;
+    }
+  
+    .maincontent .card-12 .cards .btn{
+        height: fit-content;
+        align-self: center;
+        margin-right: 5px;
+        border-radius: 6px;
+    }
+
+
+    @media (max-width:350px){
+        .maincontent .card-12 .cards .card{
+            flex-direction: column;
+            align-items: center;
+            padding: 5px 0;
+            border-radius: 6px;
+        }
+        .maincontent .card-12 .cards .txt {
+            flex-direction: column;
+            align-items: center;
+        }
+        .maincontent .card-12 .card i{
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+        .maincontent .card-12 .card .txt p{
+            margin-bottom: 5px;
+        }
+    }
