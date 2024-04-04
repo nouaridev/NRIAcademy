@@ -110,6 +110,8 @@
     font-size: 12px;
     color: #eee;
     background-color: var(--red-color);
+    border-radius: 6px;
+
 }
 .blue-botton{
     padding: 5px 10px;  border-radius: 6px;

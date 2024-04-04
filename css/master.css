@@ -1091,6 +1091,9 @@ position: relative;
 
 /* start of card 12  */
 
+    .maincontent .card-12 {
+        background-color:  rgb(255, 255, 255) ;
+    }
     .maincontent .card-12 .cards{
         display: flex;
         flex-direction: column;
@@ -1182,3 +1185,115 @@ position: relative;
             margin-bottom: 5px;
         }
     }
+
+
+
+
+    /* end  of card 12  */
+
+
+    /* start  of projects table */
+ 
+
+    .main .projects{
+        border-radius: 30px;
+        background-color:  rgb(255, 255, 255) ;
+       width: 100%;
+       
+        margin-top:20px ;
+        transition: .3s;
+        box-shadow: 0 0 5px 4px var(--grey-color);
+    }
+    
+    .main .responsivetablee{
+        overflow-x: scroll;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .main .projects:hover{
+       cursor: pointer;
+        transform: scale(1.01 ,1.01);
+    }
+
+
+
+
+    .main .projects table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    .main .projects table thead th {
+        padding: 5px 20px;
+        text-align: left;
+        font-size: 14px;
+        width: 200px;
+    }
+    .main .projects table thead  {
+        border-collapse: collapse;
+        background-color: rgba(128, 128, 128, 0.164);
+    }
+
+
+    .main .projects table  tbody td {
+        border: 1px  solid rgba(161, 158, 158, 0.158);
+        font-size: 16px;
+        padding: 15px 5px;
+        min-width: 200px;
+        vertical-align: center;
+        position: relative;
+       
+    }
+
+    .main .projects table tr:hover{
+        background-color: rgba(168, 168, 168, 0.068);
+    }
+
+    .main .projects table .btn{
+        width: 100px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .main .projects table img{
+        width: 30px;
+        border-radius: 50%;
+        position:absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: .5s;
+    }
+
+    .main .projects table img:nth-child(1){
+        left: 20px;
+        z-index: 5;
+    }
+    .main .projects table img:nth-child(2){
+        left: 35px;
+        z-index: 4;
+    }
+    .main .projects table img:nth-child(3){
+        left: 50px;
+        z-index: 3;
+    }
+    .main .projects table img:nth-child(4){
+        left: 65px;
+        z-index: 2;
+    }
+    .main .projects table img:nth-child(5){
+        left: 80px;
+        z-index: 1;
+    }
+
+
+/* end  of  projects  table */
+
+
+/* end  of  Dashboard */
+
+
+
+
+
+/* start of profile */
+
