@@ -51,10 +51,13 @@ ul{
 
 
 /* start  of the  site  control */
+    .maincontent .site-control{
+        background-color:  rgb(255, 255, 255) ;
+    }
     .maincontent .site-control >p{
         padding-bottom: 20px;
     }
-
+    
     .maincontent .site-control .top {
         margin-top: 2;
         display: flex;
@@ -153,5 +156,279 @@ ul{
             align-items:center ;
             padding-bottom: 20px;
         }
+        .maincontent .site-control .p{
+            padding-bottom: 10px;
+        }
         
     }
+
+
+
+    /* end  of  site  control */
+
+
+
+    /* start  of  th  Genreral  info */
+
+        .maincontent .general-info {
+            background-color:  rgb(255, 255, 255) ;
+        }
+
+        .maincontent .general-info form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+
+        }
+
+
+        .maincontent .general-info label{
+            color: var(--grey-color);
+            font-size: 14px;
+            padding: 10px 0 5px 0;
+        }
+        .maincontent .general-info input{
+            width: 100%;
+            padding: 10px 5px;
+            border: 1px solid rgba(128, 128, 128, 0.445);
+            border-radius: 6px;
+        }
+        .maincontent .general-info #email{
+            background-color: #8888881a;
+            cursor: not-allowed;
+    
+        }
+        .maincontent .general-info .last{
+            display: flex;
+            align-items: center;
+        }
+        .maincontent .general-info .last a{
+            border: none;
+            margin-left: 15px;
+        }
+
+
+        @media (max-width: 374px){
+            .maincontent .general-info .p{
+                padding: 10px 0;
+            }
+            .maincontent .general-info .last{
+                flex-direction: column;
+                justify-content: space-between;
+                align-content: center;
+                text-align: center;
+            }
+            .maincontent .general-info .last a{
+                margin-top: 10px;
+                margin-left: 0;
+            }
+        }
+
+
+ /* endd  of the general info */
+
+
+ /* startr  of secturityb info */
+
+    .maincontent .security-info{
+        background-color:  rgb(255, 255, 255) ;
+    }
+    .maincontent .security-info .lines{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+    .maincontent .security-info .lines .line{
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.144);
+        display: flex;
+        justify-content: space-between;
+        align-items:center
+    }
+
+    .maincontent .security-info .lines .line h3{
+        font-size: 17px;
+        font-weight: 500;
+    }
+    .maincontent .security-info .lines .line p{
+        color: gray;
+        font-size: 13px;
+        padding-top: 5px;
+    }
+
+    
+    .maincontent .security-info .right {
+        position: relative;
+        height: 30px;
+       
+    }
+
+    .maincontent .security-info .right input{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        z-index: 3;
+    }
+    
+    .maincontent .security-info .right .button{
+        width: 75px;
+        height: 30px;
+        background-color: #cac9c9;
+        padding: 5px;
+        border-radius: 19px;
+        transition: .3s;
+        position: relative;
+    }
+
+    .maincontent .security-info .right .button .yes{
+        color: white;
+        border-radius: 50%;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        visibility: hidden;
+        transition: 0.3s;
+        left: 2px;
+    }
+    .maincontent .security-info .right .button .no{
+        color: #cac9c9;
+        border-radius: 55%;
+        border: 2px solid white;
+        position: absolute;
+        background-color: white;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 2px;
+        font-size: 20px;
+        transition-delay: 0s;
+        transition: 0.3s;
+    }
+    .maincontent .security-info .right input:checked + .button{
+        flex-direction: row-reverse;
+        background-color: #0d69d5;
+        box-shadow: 0 0 15px  var(--blue-color);
+    }
+
+    .maincontent .security-info .right input:checked + .button .no{
+       z-index: -3;
+       margin-left: 50px;
+    }
+    .maincontent .security-info .right input:checked + .button .yes{
+        visibility: visible;
+        margin-left: 50px;
+    }
+
+    
+    @media (max-width:424px){
+        .maincontent .security-info .lines .line{
+            flex-direction: column;
+            align-items: center;
+        }
+        .maincontent .security-info .lines .line  .left{
+            padding-bottom: 20px;
+        }
+        .maincontent .security-info .p{
+            padding-bottom: 0px;
+        }
+    }
+
+
+
+
+/* end of the  security  info */
+
+
+/* start of  social media  info   */
+
+    .maincontent .social-info{
+        background-color:  rgb(255, 255, 255) ;   
+    }
+    
+
+    .maincontent .social-info .cards{
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-between;
+    }
+    .maincontent .social-info .cards .card{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .maincontent .social-info .cards .card .icon{
+        padding: 7px ;
+        border: 1px solid rgba(128, 128, 128, 0.466);
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        color: gray;
+
+    }
+
+    .maincontent .social-info .cards .card input{
+        border-collapse: collapse;
+        border: 1px solid rgba(128, 128, 128, 0.466);
+        padding: 7px;
+        width: 100%;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+
+    .maincontent .social-info .cards .card input:focus +     .icon{
+        color: black;
+    }
+
+
+    @media (max-width: 319px){
+        .maincontent .social-info .cards .card input{
+            font-size: 8px;
+        }
+        .maincontent .social-info .p{
+            padding-bottom: 5px;
+        }
+    }
+
+
+
+
+    /* end  of  socil  info */
+
+
+
+    /* start  of widget */
+    .maincontent .widget-control{
+        background-color:  rgb(255, 255, 255) ;   
+    }
+
+    .maincontent .widget-control .p{
+        padding-bottom: 20px;
+    }
+
+    .maincontent .widget-control .lines{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .maincontent .widget-control .lines .line{
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+        width: 100%;
+        justify-content: flex-end;
+        margin-bottom: 15px;
+    }
+
+    .maincontent .widget-control .lines .line input{
+        width: 15px;
+        border-radius: 6px;
+    }
+    .maincontent .widget-control .lines .line label{
+        margin-left: 10px;
+    }
+    /* end  of widget  */

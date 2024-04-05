@@ -130,6 +130,7 @@
 .green-botton{
     padding: 5px 10px;  border-radius: 6px;
     font-size: 12px;
+    height: fit-content;
     color: #eee;
     background-color: var(--green-color);
 }
