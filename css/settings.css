@@ -53,6 +53,7 @@ ul{
 /* start  of the  site  control */
     .maincontent .site-control{
         background-color:  rgb(255, 255, 255) ;
+        box-shadow: 0 0 5px 4px var(--grey-color);
     }
     .maincontent .site-control >p{
         padding-bottom: 20px;
@@ -172,6 +173,7 @@ ul{
 
         .maincontent .general-info {
             background-color:  rgb(255, 255, 255) ;
+            box-shadow: 0 0 5px 4px var(--grey-color);
         }
 
         .maincontent .general-info form{
@@ -233,6 +235,7 @@ ul{
 
     .maincontent .security-info{
         background-color:  rgb(255, 255, 255) ;
+        box-shadow: 0 0 5px 4px var(--grey-color);
     }
     .maincontent .security-info .lines{
         height: 100%;
@@ -346,6 +349,7 @@ ul{
 
     .maincontent .social-info{
         background-color:  rgb(255, 255, 255) ;   
+        box-shadow: 0 0 5px 4px var(--grey-color);
     }
     
 
@@ -402,6 +406,7 @@ ul{
     /* start  of widget */
     .maincontent .widget-control{
         background-color:  rgb(255, 255, 255) ;   
+        box-shadow: 0 0 5px 4px var(--grey-color);
     }
 
     .maincontent .widget-control .p{
@@ -439,6 +444,7 @@ ul{
 
     .maincontent .backup {
         background-color:  rgb(255, 255, 255) ;   
+        box-shadow: 0 0 5px 4px var(--grey-color);
     }
 
     .maincontent .backup .p1{
