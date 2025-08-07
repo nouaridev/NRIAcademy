@@ -1,0 +1,211 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    
+}
+::-webkit-scrollbar-track{
+    background-color: #eee;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--green-color);
+    
+}
+
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+  }
+body{
+    font-family: "Open Sans" , sans-serif;
+    
+}
+*:focus{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+.page{
+    background-color: #f1f5f9;
+    min-height: 100vh;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+/* start  of  plans */
+
+.maincontent .plans{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    gap: 20px;
+}
+
+
+.maincontent .plans .plan{
+    min-width: 400px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 0 5px 4px var(--grey-color);
+}
+
+.maincontent .plans .plan:hover{
+    cursor: pointer;
+    transform: scale(1.01 ,1.01);
+
+}
+
+/* satrt of header */
+.maincontent .plans .plan .header{
+    border: 2px solid white;
+    text-align: center;
+    padding: 25px 0;color: white;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+} 
+.maincontent .plans .plan .header::before{
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 30px;
+    background-color: white;
+    z-index: 1;
+    transform: rotate(-40deg);
+    left:  -390px;
+    opacity: 0.5;
+    animation: card 1s ease-in-out 0s infinite ;
+}
+@keyframes card {
+    0%{
+        left: -390px;
+        opacity: 0.5; 
+    }
+    100%{
+        transform: translateX(900px) rotate(-40deg);
+        opacity: 0;
+    }
+}
+.maincontent .plans .plan:first-child .header{
+    background-color: var(--green-color);
+    outline: 2px solid var(--green-color);
+}
+
+.maincontent .plans .plan:nth-child(2) .header{
+    background-color: var(--blue-color);
+    outline: 2px solid var(--blue-color);
+}
+.maincontent .plans .plan:last-child .header{
+    background-color: var(--orange-color);
+    outline: 2px solid var(--orange-color);
+}
+
+
+
+.maincontent .plans .plan .header p{
+    font-size: 25px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.maincontent .plans .plan .header h1{
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+    width: fit-content;
+    z-index: 2;
+}
+
+.maincontent .plans .plan .header h1::before{
+   content: "$";
+   color: white;
+   font-size: 25px;
+   width: fit-content;
+   height: 12px;
+   position: absolute;
+   top: 0;
+   left: -20px;
+   
+}
+/* end  of header  */
+/* start of lines */
+
+.maincontent .lines .line{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5px;
+    border-bottom: 1px solid #eee;
+
+}
+.maincontent .lines .line:hover{
+    background-color: #88888823;
+    border-left: 3px solid var(--green-color);
+}
+.maincontent .lines .line .left{
+    display: flex;
+    align-items: center;
+}
+
+.maincontent .lines .line .left  .fa-xmark{
+    color: var(--red-color);
+    padding-right: 5px;
+}
+.maincontent .lines .line .left  .fa-check{
+    color: var(--green-color);
+    padding-right: 5px;
+}
+
+.maincontent .lines .line:hover .left i{
+    transform: scale(1.3 ,1.3);
+
+}
+
+
+
+@media (max-width:520px){
+    .maincontent .plans {
+        grid-template-columns: 1fr;
+    }
+    .maincontent .plans .plan{
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .maincontent .lines .line{
+        flex-direction: column;
+        align-items: center;
+    }
+    .maincontent .lines .line .left{
+        padding-bottom: 20px;
+        text-align: center;
+        flex-direction: column;
+    }
+    .maincontent .lines .line .left i{
+        padding-bottom: 10px;
+    }
+    .maincontent .lines {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+}
